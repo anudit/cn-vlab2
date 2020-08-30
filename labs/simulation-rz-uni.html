@@ -3,36 +3,47 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Virtual Labs</title>
-        <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
         <meta name="author" content="Anudit Nagar" />
-        <!-- Bootstrap 3.3.6 -->
         <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
-        <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
-        <!-- Theme style -->
         <link rel="stylesheet" href="../../dist/css/AdminLTE.css" />
-        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css" />
 
     </head>
 
     <body>
-        <!--Navigation Bar-->
-        <div class="navbar navbar-default">
+        <div class="navbar navbar-default" style="border-bottom-color: #ff4700;border-bottom-width: 10px;">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="http://iitb.ac.in">
                         <span><img src="images/iitb_logo_30dpi.png" style="margin-top: -8px;" /></span>
                     </a>
                 </div>
+                <div id="overlay" onclick="off()">
+                    <div id="text">
+                        RZ uses three levels of amplitude i.e. positive, negative, zero. it returns to zero in the middle of each bit. 1 : positiveto-zero, 0 : negative-to-zero.
+                    </div>
+                </div>
+
+                <script>
+                  function on() {
+                    document.getElementById("overlay").style.display = "block";
+                  }
+
+                  function off() {
+                    document.getElementById("overlay").style.display = "none";
+                  }
+                </script>
+
+                <p class="navbar-brand" style="position: absolute;right: 0;" onclick="on()">
+                    Instructions
+                </p>
             </div>
         </div>
 
         <div class="wrapper" style="background-color:#ecf0f5;">
-            <!-- Content Wrapper. Contains page content -->
             <div>
-                <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
                         RZ-Unipolar - Simulation
@@ -51,26 +62,17 @@
                     </div>
                     <div id="rz-uni"></div>
                 </section>
-                <!-- /.content -->
             </div>
             <footer class="main-footer" style=" bottom: 0; position: fixed; width: 100%; ">
                 <h4 align="center">Lab contributed by Bennett University</h4>
             </footer>
-            <!-- /.content-wrapper -->
         </div>
     </body>
-    <!-- ./wrapper -->
-    <!-- jQuery 2.2.3 -->
     <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <!-- Bootstrap 3.3.6 -->
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
-    <!-- Slimscroll -->
     <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <!-- FastClick -->
     <script src="../../plugins/fastclick/fastclick.js"></script>
-    <!-- AdminLTE App -->
     <script src="../../dist/js/app.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script type="text/javascript" src="./rz-uni/index.js"></script>
