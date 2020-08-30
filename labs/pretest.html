@@ -1,0 +1,372 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta name="author" content="Anudit Nagar">
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+        <script>
+            window.onload = function () {
+                document.getElementById("pretest").className = "active treeview";
+            }
+        </script>
+    </head>
+
+    <body class="hold-transition skin-blue sidebar-mini">
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://iitb.ac.in"><span><img src="images/iitb_logo_30dpi.png" style="margin-top: -8px;"></span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+        <div class="wrapper">
+        	<header class="main-header">
+        <a href="../index.html" class="logo">
+        <p align="center" style="font-size:15px;"><b>Encoding Experiments</b></p>
+    </a>
+        <nav class="navbar navbar-static-top">
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"><i class="fa fa-dashboard"></i>Encoding Experiments</a>
+              </li>
+              <li>
+                <a href="#">RZ-Unipolar</a>
+              </li>
+              <li class="active">Pre Test</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+
+
+      <aside class="main-sidebar">
+        <section class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="treeview" id="aim">
+                    <a href="index.html">
+                        <i class="fa fa-files-o"></i> <span>Aim</span>
+                    </a>
+                </li>
+                <li class="treeview" id="theory">
+                    <a href="theory.html" >
+                        <i class="fa fa-files-o"></i>
+                        <span>Theory</span>
+                    </a>
+                </li>
+                <li class="treeview" id="pretest">
+                    <a href="pretest.html">
+                        <i class="fa fa-files-o"></i> <span>Pre Test</span>
+                    </a>
+                </li>
+
+                <li class="treeview" id="procedure">
+                    <a href="procedure.html">
+                        <i class="fa fa-files-o"></i> <span>Procedure</span>
+                    </a>
+                </li>
+                <li class="treeview" id="simulation">
+                    <a href="simulation.html">
+                        <i class="fa fa-laptop"></i>
+                        <span>Simulation</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="posttest">
+                    <a href=" posttest.html">
+                        <i class=" fa fa-files-o">
+                    </i>
+                    <span>Post Test</span>
+                    <span class="pull-right-container">
+                    </span>
+                    </a>
+                </li>
+                <li class="treeview" id="ref">
+                    <a href="references.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>References</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+      </aside>
+
+        <div class="content-wrapper">
+          <section class="content">
+            <h3> Pre Test </h3>
+            <p style="font-size:130%; margin-top:2%">
+
+              <div>
+                <p>Q1) Unipolar RZ is a type of ______  encoding</p>
+                <input type="radio" id="1" name="q1" value="1">
+                <label for="1">Line</label><br>
+                <input type="radio" id="2" name="q1" value="2">
+                <label for="2">Block</label><br>
+                <input type="radio" id="3" name="q1" value="3">
+                <label for="3">Scrambling</label><br>
+                <input type="radio" id="4" name="q1" value="4">
+                <label for="4">None of the above</label>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>Line</p>
+                </details>
+              </div>
+              <br/><br/>
+              <div>
+                <p>Q2) DC component is present in the encoded signal and there is loss of synchronization for long sequences of 0’s and 1’s in unipolar RZ</p>
+                <input type="radio" id="2-1" name="q2" value="1">
+                <label for="2-1">True</label><br>
+                <input type="radio" id="2-2" name="q2" value="2">
+                <label for="2-2">False</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>True</p>
+                </details>
+              </div>
+              <br/><br/>
+              <div>
+                <p>Q3) NRZ-L is a type of _____ line encoding.</p>
+                <input type="radio" id="1" name="q1" value="1">
+                <label for="1">Bipolar</label><br>
+                <input type="radio" id="2" name="q1" value="2">
+                <label for="2">Multitransition</label><br>
+                <input type="radio" id="3" name="q1" value="3">
+                <label for="3">Polar</label><br>
+                <input type="radio" id="4" name="q1" value="4">
+                <label for="4">None of the above</label>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>Polar</p>
+                </details>
+              </div>
+              <br/></br>
+              <div>
+                <p>Q4) NRZ codes are easy to engineer and it makes efficient use of bandwidth.</p>
+                <input type="radio" id="2-1" name="q2" value="1">
+                <label for="2-1">True</label><br>
+                <input type="radio" id="2-2" name="q2" value="2">
+                <label for="2-2">False</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>True</p>
+                </details>
+              </div>
+              <br/></br>
+              <div>
+                <p>Q5) Statement 1: For each 1 in the bit sequence, the signal level is inverted.</br>
+                  Statement 2: A transition from one voltage level to the other represents a 1.
+                  </p>
+                <input type="radio" id="1" name="q1" value="1">
+                <label for="1">Statement 1 is true and Statement 2 is false</label><br>
+                <input type="radio" id="2" name="q1" value="2">
+                <label for="2">Statement 1 is false and Statement 2 is true</label>  <br>
+                <input type="radio" id="3" name="q1" value="3">
+                <label for="3">Both are true</label><br>
+                <input type="radio" id="4" name="q1" value="4">
+                <label for="4">Both are false</label>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>Both are true</p>
+                </details>
+              </div>
+              <br/></br>
+              <div>
+                <p>Q6) Which of the following is not a Polar line encoding scheme?</p>
+                <input type="radio" id="2-1" name="q2" value="1">
+                <label for="2-1">NRZ-I</label><br>
+                <input type="radio" id="2-2" name="q2" value="2">
+                <label for="2-2">NRZ-L</label><br>
+                <input type="radio" id="2-3" name="q2" value="3">
+                <label for="2-3">AMI</label><br>
+                <input type="radio" id="2-4" name="q2" value="4">
+                <label for="2-4">All of the above</label>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>AMI</p>
+                </details>
+              </div>
+              <br/></br>
+              <div>
+                <p>Q7) Manchester encoding is a combination of which two line encoding schemes.</p>
+                <input type="radio" id="1" name="q1" value="1">
+                <label for="1">NRZ-L and RZ</label><br>
+                <input type="radio" id="2" name="q1" value="2">
+                <label for="2">NRZ-I and RZ</label><br>
+                <input type="radio" id="3" name="q1" value="3">
+                <label for="3">NRZ-L and AMI</label><br>
+                <input type="radio" id="4" name="q1" value="4">
+                <label for="4">None of the above</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>NRZ-L and RZ</p>
+                </details>
+              </div>
+              <br/></br>
+              <div>
+                <p>Q8) How many levels does manchester line encoding involve?</p>
+                <br/>
+                <input type="radio" id="2-1" name="q2" value="1">
+                <label for="2-1">Two levels with inversion in the middle of each bit </label><br>
+                <input type="radio" id="2-2" name="q2" value="2">
+                <label for="2-2">Three levels with inversion in the middle of each bit </label><br>
+                <input type="radio" id="2-3" name="q2" value="3">
+                <label for="2-3">Two levels without inversion in the middle of each bit </label><br>
+                <input type="radio" id="2-4" name="q2" value="4">
+                <label for="2-4">Three levels without inversion in the middle of each bit </label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>Two levels with inversion in the middle of each bit</p>
+                </details>
+              </div>
+              <br/></br>
+              <div>
+                <p>Q9) The polarities in NRZ format use.</p>
+                <input type="radio" id="1" name="q1" value="1">
+                <label for="1">Complete pulse duration</label><br>
+                <input type="radio" id="2" name="q1" value="2">
+                <label for="2">Half duration</label><br>
+                <input type="radio" id="3" name="q1" value="3">
+                <label for="3">Bothe positive as well as negative value</label><br>
+                <input type="radio" id="4" name="q1" value="4">
+                <label for="4">Each pulse is used for twice the duration</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>Complete pulse duration</p>
+                </details>
+              </div>
+              <br/></br>
+              <div>
+                <p>Q10) Which of the following combines the idea of RZ and NRZ-I?</p>
+                <br/>
+                <input type="radio" id="2-1" name="q2" value="1">
+                <label for="2-1">Differential manchester</label><br>
+                <input type="radio" id="2-2" name="q2" value="2">
+                <label for="2-2">Pseudoternary</label><br>
+                <input type="radio" id="2-3" name="q2" value="3">
+                <label for="2-3">AMI</label><br>
+                <input type="radio" id="2-4" name="q2" value="4">
+                <label for="2-4">None of these</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>Differential manchester</p>
+                </details>
+              </div>
+              <br/><br/>
+              <div>
+                <p>Q11) In which line encoding scheme 0 bit is represented by Zero level and binary 1 is represented by alternating positive and negative voltages.</p>
+                <input type="radio" id="1" name="q1" value="1">
+                <label for="1">NRZ-I</label><br>
+                <input type="radio" id="2" name="q1" value="2">
+                <label for="2">AMI</label><br>
+                <input type="radio" id="3" name="q1" value="3">
+                <label for="3">Pseudoternary</label><br>
+                <input type="radio" id="4" name="q1" value="4">
+                <label for="4">All of the above</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>AMI</p>
+                </details>
+              </div>
+              <br/></br>
+              <div>
+                <p>Q12) AMI is a __________ type of line encoding scheme.</p>
+                <br/>
+                <input type="radio" id="2-1" name="q2" value="1">
+                <label for="2-1">Polar</label><br>
+                <input type="radio" id="2-2" name="q2" value="2">
+                <label for="2-2">Uni-Polar</label><br>
+                <input type="radio" id="2-3" name="q2" value="3">
+                <label for="2-3">Bipolar</label><br>
+                <input type="radio" id="2-4" name="q2" value="4">
+                <label for="2-4">Multitransition</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>Bipolar</p>
+                </details>
+              </div>
+              <br/><br/>
+              <div>
+                <p>Q13)
+                  In Pseudoternary line encoding<br/>
+                  Statement 1:  0 bit is represented by Zero level <br/>
+                  Statement 2: Binary 1 is represented by alternating positive and negative voltages.<br/>
+                  Which of the above are true.<br/>
+                  </p>
+                <input type="radio" id="1" name="q1" value="1">
+                <label for="1">Statement 1 is true and Statement 2 is false</label><br>
+                <input type="radio" id="2" name="q1" value="2">
+                <label for="2">Statement 1 is false and Statement 2 is true</label><br>
+                <input type="radio" id="3" name="q1" value="3">
+                <label for="3">Both are true</label><br>
+                <input type="radio" id="4" name="q1" value="4">
+                <label for="4">Both are false</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>Both are false</p>
+                </details>
+              </div>
+              <br/></br>
+              <div>
+                <p>Q14) The ________ represents the number of bits sent per second, whereas the ______ defines the number of signal elements per second in the signal.
+                </p>
+                <br/>
+                <input type="radio" id="2-1" name="q2" value="1">
+                <label for="2-1">bit rate, baud rate </label><br>
+                <input type="radio" id="2-2" name="q2" value="2">
+                <label for="2-2">baud rate , bit rate</label><br>
+                <input type="radio" id="2-3" name="q2" value="3">
+                <label for="2-3">Both are same</label><br>
+                <input type="radio" id="2-4" name="q2" value="4">
+                <label for="2-4">None of the above</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>bit rate, baud rate </p>
+                </details>
+              </div>
+            </p>
+          </section>
+        </div>
+        <footer class="main-footer">
+            <h4 align="center">Lab contributed by Bennett University</h4>
+        </footer>
+      </div>
+
+    </body>
+    <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+      <script src="../../bootstrap/js/bootstrap.min.js"></script>
+      <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+      <script src="../../plugins/fastclick/fastclick.js"></script>
+      <script src="../../dist/js/app.min.js"></script>
+</html>

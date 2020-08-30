@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css" />
         <script>
             window.onload = function () {
-                document.getElementById("aim").className = "active treeview";
+                document.getElementById("ref").className = "active treeview";
             };
         </script>
     </head>
@@ -55,6 +55,7 @@
                     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                         <span class="sr-only">Toggle navigation</span>
                     </a>
+                    <section class="content-header"></section>
                 </nav>
             </header>
 
@@ -104,16 +105,10 @@
 
             <div class="content-wrapper">
                 <section class="content">
-                    <h3>Aim</h3>
-                    <ol style="font-size: 130%; margin-top: 2%;">
-                        <li>To understand RZ-Unipolar Encoding Scheme.</li>
-                        <li>To understand NRZ-L Encoding Scheme.</li>
-                        <li>To understand NRZ-I Encoding Scheme.</li>
-                        <li>To understand Manchester Encoding Scheme.</li>
-                        <li>To understand Differential Manchester Encoding Scheme.</li>
-                        <li>To understand AMI Encoding Scheme.</li>
-                        <li>To understand Pseudoternary Encoding Scheme.</li>
-                    </ol>
+                    <h3>References</h3>
+                    <p style="font-size: 130%; margin-top: 2%;">
+                        <a href="../../paper.pdf">View Paper</a>
+                    </p>
                 </section>
             </div>
             <footer class="main-footer">
@@ -121,6 +116,7 @@
             </footer>
         </div>
     </body>
+
     <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
