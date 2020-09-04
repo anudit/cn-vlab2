@@ -55,6 +55,17 @@
             .topright:hover {
                 color: red;
             }
+            .view-button {
+            padding: 10px 15px;
+            /* background-color: green; */
+            /* color: white; */
+            border-radius: 5px;
+        }
+
+        .view-button:hover {
+            background-color: #77BB41;
+            color:white;
+        }
         </style>
     </head>
 
@@ -118,7 +129,7 @@
                               </script>
 
                               <h5 style="cursor:pointer;text-align:right" onclick="on()">
-                                  View Instructions
+                                <span class="view-button">View Instructions</span>
                               </h5>
 
                               <label for="exps">Choose an Experiment:</label>
@@ -152,9 +163,13 @@
                     <div id="nrz_i"></div>
                 </section>
             </div>
-            <footer class="main-footer" style="bottom: 0; position: fixed; width: 100%;">
-                <h4  align=center>© copyrights Virtual Labs IIT Roorkee</h4>
-            </footer>
+
+        </div>
+        <div style="position:absolute;left:0;right:0;">
+            <div style=" bottom: 0; position: fixed; width: 100%; ">
+                <h4 style="text-align:center;padding:20px;background-color: black;color:blanchedalmond">© copyrights Virtual
+                    Labs IIT Roorkee</h4>
+            </div>
         </div>
     </body>
     <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
