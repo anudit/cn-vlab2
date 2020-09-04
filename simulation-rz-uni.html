@@ -10,7 +10,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../../dist/css/AdminLTE.css" />
     <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css" />
+    <style>
+        .view-button {
+            padding: 2px 4px;
+            background-color: green;
+            color: white;
 
+        }
+
+        .view-button:hover {
+            background-color: teal;
+        }
+    </style>
 </head>
 
 <body>
@@ -74,7 +85,7 @@
                     </script>
 
                     <h5 style="cursor:pointer;text-align:right" onclick="on()">
-                        View Instructions
+                        <span class="view-button">View Instructions</span>
                     </h5>
 
                     <label for="exps">Choose an Experiment:</label>
@@ -111,8 +122,9 @@
 
     </div>
     <div style="position:absolute;left:0;right:0;">
-        <div  style=" bottom: 0; position: fixed; width: 100%; ">
-            <h4 style="text-align:center;padding:20px;background-color: black;color:blanchedalmond">© copyrights Virtual Labs IIT Roorkee</h4>
+        <div style=" bottom: 0; position: fixed; width: 100%; ">
+            <h4 style="text-align:center;padding:20px;background-color: black;color:blanchedalmond">© copyrights Virtual
+                Labs IIT Roorkee</h4>
         </div>
     </div>
 </body>
