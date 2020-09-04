@@ -1,123 +1,128 @@
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Virtual Labs</title>
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
-        <meta name="author" content="Anudit Nagar">
-        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="../../dist/css/AdminLTE.css" />
-        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css" />
 
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Virtual Labs</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <meta name="author" content="Anudit Nagar">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css" />
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css" />
 
-    <body>
-        <div class="navbar" style="border-bottom-color: #ff6600;border-bottom-width: 10px;height: 100px;">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="http://iitb.ac.in">
-                        <span><img src="images/vlab.jpg" style="margin-top: -8px;height: 70px;" /></span>
-                    </a>
+</head>
+
+<body>
+    <div class="navbar" style="border-bottom-color: #ff6600;border-bottom-width: 10px;height: 100px;">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://iitb.ac.in">
+                    <span><img src="images/vlab.jpg" style="margin-top: -8px;height: 70px;" /></span>
+                </a>
+            </div>
+            <div id="overlay" onclick="off()">
+                <div id="text">
+                    RZ uses three levels of amplitude i.e. positive, negative, zero. it returns to zero in the middle of
+                    each bit. 1 : positiveto-zero, 0 : negative-to-zero.
                 </div>
-                <div id="overlay" onclick="off()">
-                    <div id="text">
-                        RZ uses three levels of amplitude i.e. positive, negative, zero. it returns to zero in the middle of each bit. 1 : positiveto-zero, 0 : negative-to-zero.
+            </div>
+            <p class="navbar-brand" style="position:absolute;right:0;">
+                Line Encoding Experiments
+            </p>
+
+        </div>
+    </div>
+
+    <div class="wrapper" style="background-color: #ecf0f5;">
+        <div>
+            <section class="content-header">
+                <div class="row" style=" text-align: center; ">
+                    <script>
+                        function on() {
+                            document.getElementById("overlay").style.display = "block";
+                        }
+
+                        function off() {
+                            document.getElementById("overlay").style.display = "none";
+                        }
+
+                        function switchExp() {
+                            let selInd = parseInt(document.querySelector('#exps').value);
+                            if (selInd == 0) {
+                                window.location = './simulation-rz-uni.html';
+                            }
+                            else if (selInd == 1) {
+                                window.location = './simulation-nrz-l.html';
+                            }
+                            else if (selInd == 2) {
+                                window.location = './simulation-nrz-i.html';
+                            }
+                            else if (selInd == 3) {
+                                window.location = './simulation-manchester.html';
+                            }
+                            else if (selInd == 4) {
+                                window.location = './simulation-differential-manchester.html';
+                            }
+                            else if (selInd == 5) {
+                                window.location = './simulation-ami.html';
+                            }
+                            else if (selInd == 6) {
+                                window.location = './simulation-pseudoternary.html';
+                            }
+                        }
+                    </script>
+
+                    <h5 style="cursor:pointer;text-align:right" onclick="on()">
+                        View Instructions
+                    </h5>
+
+                    <label for="exps">Choose an Experiment:</label>
+                    <select name="exps" id="exps">
+                        <option type="button" value="0">RZ Unipolar</option>
+                        <option type="button" value="1">NRZ-L</option>
+                        <option type="button" value="2">NRZ-I</option>
+                        <option type="button" value="3">Manchester</option>
+                        <option type="button" value="4">Differential Manchester</option>
+                        <option type="button" value="5">AMI</option>
+                        <option type="button" value="6">Pseudoternary</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" onclick="switchExp()">Submit</button>
+                </div>
+                <br /><br />
+                <h1 style="text-align:center">
+                    RZ-Unipolar - Simulation
+                </h1>
+            </section>
+            <section class="content">
+                <div class="row">
+                    <div class="input-field col col-xs-12 col-md-6 s5 text-center">
+                        <label for="data_bit">Enter Data Bit</label>
+                        <input id="data_bit" type="text" class="validate" value="10101" />
+                    </div>
+                    <div class="input-field col col-xs-12 col-md-6 s5 text-center">
+                        <label for="voltage">Enter Voltage</label>
+                        <input id="voltage" type="text" class="validate" value="1" />
                     </div>
                 </div>
-                <p class="navbar-brand" style="position:absolute;right:0;">
-                    Line Encoding Experiments
-                </p>
-
-            </div>
+                <div id="rz-uni"></div>
+            </section>
         </div>
 
-            <div class="wrapper" style="background-color: #ecf0f5;">
-                <div>
-                    <section class="content-header">
-                        <div class="row" style=" text-align: center; ">
-                            <script>
-                                function on() {
-                                  document.getElementById("overlay").style.display = "block";
-                                }
-
-                                function off() {
-                                  document.getElementById("overlay").style.display = "none";
-                                }
-
-                                function switchExp(){
-                                    let selInd = parseInt(document.querySelector('#exps').value);
-                                    if (selInd == 0){
-                                        window.location = './simulation-rz-uni.html';
-                                    }
-                                    else if (selInd == 1){
-                                        window.location = './simulation-nrz-l.html';
-                                    }
-                                    else if (selInd == 2){
-                                        window.location = './simulation-nrz-i.html';
-                                    }
-                                    else if (selInd == 3){
-                                        window.location = './simulation-manchester.html';
-                                    }
-                                    else if (selInd == 4){
-                                        window.location = './simulation-differential-manchester.html';
-                                    }
-                                    else if (selInd == 5){
-                                        window.location = './simulation-ami.html';
-                                    }
-                                    else if (selInd == 6){
-                                        window.location = './simulation-pseudoternary.html';
-                                    }
-                                }
-                              </script>
-
-                              <h5 style="cursor:pointer;text-align:right" onclick="on()">
-                                  View Instructions
-                              </h5>
-
-                              <label for="exps">Choose an Experiment:</label>
-                            <select name="exps" id="exps">
-                                <option type="button" value="0" >RZ Unipolar</option>
-                                <option type="button" value="1" >NRZ-L</option>
-                                <option type="button" value="2" >NRZ-I</option>
-                                <option type="button" value="3" >Manchester</option>
-                                <option type="button" value="4" >Differential Manchester</option>
-                                <option type="button" value="5" >AMI</option>
-                                <option type="button" value="6" >Pseudoternary</option>
-                            </select>
-                            <button type="button" class="btn btn-primary" onclick="switchExp()">Submit</button>
-                        </div>
-                        <br/><br/>
-                    <h1 style="text-align:center">
-                        RZ-Unipolar - Simulation
-                    </h1>
-                </section>
-                <section class="content">
-                    <div class="row">
-                        <div class="input-field col col-xs-12 col-md-6 s5 text-center">
-                            <label for="data_bit">Enter Data Bit</label>
-                            <input id="data_bit" type="text" class="validate" value="10101" />
-                        </div>
-                        <div class="input-field col col-xs-12 col-md-6 s5 text-center">
-                            <label for="voltage">Enter Voltage</label>
-                            <input id="voltage" type="text" class="validate" value="1" />
-                        </div>
-                    </div>
-                    <div id="rz-uni"></div>
-                </section>
-            </div>
-            
-        </div>
+    </div>
+    <div style="position:absolute;left:0;right:0;">
         <footer class="main-footer" style=" bottom: 0; position: fixed; width: 100%; ">
-            <h4  style="text-align:center;">© copyrights Virtual Labs IIT Roorkee</h4>
+            <h4 style="text-align:center;">© copyrights Virtual Labs IIT Roorkee</h4>
         </footer>
-    </body> 
-    <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <script src="../../bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <script src="../../plugins/fastclick/fastclick.js"></script>
-    <script src="../../dist/js/app.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script type="text/javascript" src="./rz-uni/index.js"></script>
+    </div>
+</body>
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<script src="../../dist/js/app.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="./rz-uni/index.js"></script>
+
 </html>
