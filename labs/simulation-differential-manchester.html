@@ -59,48 +59,81 @@
     </head>
 
     <body>
-      <div class="navbar navbar-default" style="border-bottom-color: #ff4700;border-bottom-width: 10px;">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="http://iitb.ac.in">
-                    <span><img src="images/iitb_logo_30dpi.png" style="margin-top: -8px;" /></span>
-                </a>
-            </div>
-            <div id="overlay" onclick="off()">
-                <div id="text">
-                  It combines the idea of RZ and NRZ-I.If the next bit is 0,transition will occur but if the next bit is 1 , no transition will occur.
+        <div class="navbar" style="border-bottom-color: #ff4700;border-bottom-width: 10px;height: 100px;">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="http://iitb.ac.in">
+                        <span><img src="images/vlab.jpg" style="margin-top: -8px;height: 70px;" /></span>
+                    </a>
                 </div>
-            </div>
-
-            <script>
-              function on() {
-                document.getElementById("overlay").style.display = "block";
-              }
-
-              function off() {
-                document.getElementById("overlay").style.display = "none";
-              }
-            </script>
-
-            <p class="navbar-brand" style="position: absolute;right: 0;" onclick="on()">
-                Instructions
-            </p>
-        </div>
-    </div>
-
-        <div class="wrapper" style="background-color: #ecf0f5;">
-            <div>
-                <section class="content-header">
-                    <div class="row" style=" text-align: center; ">
-                        <button type="button" class="btn btn-primary" onclick="window.location = './simulation-rz-uni.html'">RZ Unipolar</button>
-                        <button type="button" class="btn btn-primary" onclick="window.location = './simulation-nrz-l.html'">NRZ-L</button>
-                        <button type="button" class="btn btn-primary" onclick="window.location = './simulation-nrz-i.html'">NRZ-I</button>
-                        <button type="button" class="btn btn-primary" onclick="window.location = './simulation-manchester.html'">Manchester</button>
-                        <button type="button" class="btn btn-primary" onclick="window.location = './simulation-differential-manchester.html'">Differential Manchester</button>
-                        <button type="button" class="btn btn-primary" onclick="window.location = './simulation-ami.html'">AMI</button>
-                        <button type="button" class="btn btn-primary" onclick="window.location = './simulation-pseudoternary.html'">Pseudoternary</button>
+                <div id="overlay" onclick="off()">
+                    <div id="text">
+                        It combines the idea of RZ and NRZ-I.If the next bit is 0,transition will occur but if the next bit is 1 , no transition will occur.
                     </div>
-                    <br/><br/>
+                </div>
+                <p class="navbar-brand" style="position:absolute;right:0;">
+                    Line Encoding Experiments
+                </p>
+
+            </div>
+        </div>
+
+            <div class="wrapper" style="background-color: #ecf0f5;">
+                <div>
+                    <section class="content-header">
+                        <div class="row" style=" text-align: center; ">
+                            <script>
+                                function on() {
+                                  document.getElementById("overlay").style.display = "block";
+                                }
+
+                                function off() {
+                                  document.getElementById("overlay").style.display = "none";
+                                }
+
+                                function switchExp(){
+                                    let selInd = parseInt(document.querySelector('#exps').value);
+                                    if (selInd == 0){
+                                        window.location = './simulation-rz-uni.html';
+                                    }
+                                    else if (selInd == 1){
+                                        window.location = './simulation-nrz-l.html';
+                                    }
+                                    else if (selInd == 2){
+                                        window.location = './simulation-nrz-i.html';
+                                    }
+                                    else if (selInd == 3){
+                                        window.location = './simulation-manchester.html';
+                                    }
+                                    else if (selInd == 4){
+                                        window.location = './simulation-differential-manchester.html';
+                                    }
+                                    else if (selInd == 5){
+                                        window.location = './simulation-ami.html';
+                                    }
+                                    else if (selInd == 6){
+                                        window.location = './simulation-pseudoternary.html';
+                                    }
+                                }
+                              </script>
+
+                              <h5 style="cursor:pointer;" onclick="on()">
+                                  View Instructions
+                              </h5>
+
+                              <label for="exps">Choose an Experiment:</label>
+                            <select name="exps" id="exps">
+                                <option type="button" value="0" >RZ Unipolar</option>
+                                <option type="button" value="1" >NRZ-L</option>
+                                <option type="button" value="2" >NRZ-I</option>
+                                <option type="button" value="3" >Manchester</option>
+                                <option type="button" value="4" >Differential Manchester</option>
+                                <option type="button" value="5" >AMI</option>
+                                <option type="button" value="6" >Pseudoternary</option>
+                            </select>
+                            <button type="button" class="btn btn-primary" onclick="switchExp()">Submit</button>
+                        </div>
+                        <br/><br/>
                     <h1>
                         Differential Manchester - Simulation
                     </h1>
