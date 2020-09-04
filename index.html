@@ -1,107 +1,137 @@
-<html><head>
-    <title>Virtual Labs</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Anudit Nagar">
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="bootstrap/css/labmenu.css" rel="stylesheet" type="text/css">
-  </head><body>
-    <!--Navigation Bar-->
-<div class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://iitb.ac.in"><span><img src="images/iitb_logo_30dpi.png" style="margin-top: -8px;"></span></a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-      <ul class="nav navbar-nav navbar-right"style="background:#f8f8f8">
-        <li class="active">
-          <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
-        </li>
-        <li class="active">
-          <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
-        </li>
-        <!--<li class="active">
-          <a href="http://vlabs.iitb.ac.in/vlabs-dev/Syllabus_Matrix/syllabus.html">SYLLABUS</a>
-        </li>
-        <li class="active">
-          <a href="http://vlabs.iitb.ac.in/vlabs-dev/L1-Form/idea.php">CONTRIBUTE</a>
-        </li>
-        <li class="active">
-          <a href="http://vlabs.iitb.ac.in/vlabs-dev/vlab_tool/index.php ">LAB TOOL</a>
-        </li>
-        <li class="active">
-          <a href="http://vlabs.iitb.ac.in/vlabs-dev/wiki/doku.php">WIKI</a>
-        </li> -->
-        <li class="active">
-          <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Virtual Labs</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+        <meta name="author" content="Anudit Nagar">
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css" />
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css" />
+        <script>
+            window.onload = function () {
+                document.getElementById("aim").className = "active treeview";
+            };
+        </script>
+    </head>
 
+    <body class="hold-transition skin-blue sidebar-mini">
+        <div class="navbar navbar-default">
 
-<div class="main">
-  <div class="section section-primary">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="jumbotron">
-            <h1 class="text-primary">Experiments on Polar and Bipolar Line Encoding Schemes</h1>
-            <p class="text-primary">
-              Line encoding is the process of converting digital data into digital signals is referred as Line Encoding.With the help of line encoding schemes, a sequence of bits are converted into digital signal(encoding) which then get converted back into bits at the receiver end (decoding).
-            </p>
-            <a class="btn btn-primary btn-large" href="labs/index.html">Explore</a>
-          </div>
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://iitb.ac.in">
+                        <span><img src="images/iitb_logo_30dpi.png" style="margin-top: -8px;" /></span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <center>
-            <img src="images/Bennett-University.png" alt="" height="100" width="auto">
-            <p></p>
-            <h3>This lab is contributed by Bennett University</h3>
 
-            <h4><a href="https://linkedin.com/in/anuditnagar" target="_blank">Anudit Nagar</a> and <a href="https://www.linkedin.com/in/abhimanyu-banerjee/" target="_blank">Abhimanyu Banerjee</a></h4>
-            <p></p>
-          </center>
+        <div class="wrapper">
+            <header class="main-header">
+                <a href="../index.html" class="logo">
+                    <p align="center" style="font-size: 15px;"><b>Encoding Experiments</b></p>
+                </a>
+                <nav class="navbar navbar-static-top">
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <ol class="breadcrumb" style="max-width: 400px; float: right; background: #3c8dbc;padding: 0;padding-top: 10px;padding-right: 10px;">
+                        <li class="breadcrumb-item active">
+                            Encoding Experiments
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Aim</li>
+                      </ol>
+                </nav>
+            </header>
+
+            <aside class="main-sidebar">
+                <section class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li class="treeview" id="aim">
+                            <a href="index.html"> <i class="fa fa-files-o"></i> <span>Aim</span> </a>
+                        </li>
+                        <li class="treeview" id="theory">
+                            <a href="theory.html">
+                                <i class="fa fa-files-o"></i>
+                                <span>Theory</span>
+                            </a>
+                        </li>
+                        <li class="treeview" id="pretest">
+                            <a href="pretest.html"> <i class="fa fa-files-o"></i> <span>Pre Test</span> </a>
+                        </li>
+
+                        <li class="treeview" id="procedure">
+                            <a href="procedure.html"> <i class="fa fa-files-o"></i> <span>Procedure</span> </a>
+                        </li>
+                        <li class="treeview" id="simulation">
+                            <a href="simulation.html">
+                                <i class="fa fa-laptop"></i>
+                                <span>Simulation</span>
+                                <span class="pull-right-container"> </span>
+                            </a>
+                        </li>
+                        <li class="treeview" id="posttest">
+                            <a href=" posttest.html">
+                                <i class="fa fa-files-o"> </i>
+                                <span>Post Test</span>
+                                <span class="pull-right-container"> </span>
+                            </a>
+                        </li>
+                        <li class="treeview" id="ref">
+                            <a href="references.html">
+                                <i class="fa fa-files-o"></i>
+                                <span>References</span>
+                                <span class="pull-right-container"> </span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+
+            <div class="content-wrapper">
+                <section class="content">
+                    <h3>Aim</h3>
+                    <ol style="font-size: 130%; margin-top: 2%;">
+                        <li>To understand RZ-Unipolar Encoding Scheme.</li>
+                        <li>To understand NRZ-L Encoding Scheme.</li>
+                        <li>To understand NRZ-I Encoding Scheme.</li>
+                        <li>To understand Manchester Encoding Scheme.</li>
+                        <li>To understand Differential Manchester Encoding Scheme.</li>
+                        <li>To understand AMI Encoding Scheme.</li>
+                        <li>To understand Pseudoternary Encoding Scheme.</li>
+                    </ol>
+                </section>
+            </div>
+            <footer class="main-footer">
+                <h4 align="center">Lab contributed by Bennett University</h4>
+            </footer>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer class="section section-primary bottom-footer">
-  <div class="container">
-      <div class="row">
-          <div class="col-sm-12 col-md-6">
-              <h1>Vlabs-Dev Team</h1>
-              <p>
-                  INDIAN INSTITUTE OF TECHNOLOGY BOMBAY <br />
-                  POWAI, MUMBAI 76. <br />
-                  INDIA
-              </p>
-          </div>
-          <div class="col-sm-12 col-md-6 text-right">
-              <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
-          </div>
-      </div>
-  </div>
-</footer>
-
-</body></html>
+    </body>
+    <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="../../plugins/fastclick/fastclick.js"></script>
+    <script src="../../dist/js/app.min.js"></script>
+</html>

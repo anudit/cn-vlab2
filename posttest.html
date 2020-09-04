@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
         <script>
             window.onload = function () {
-                document.getElementById("pretest").className = "active treeview";
+                document.getElementById("posttest").className = "active treeview";
             }
         </script>
     </head>
@@ -46,26 +46,21 @@
 
         <div class="wrapper">
         	<header class="main-header">
-        <a href="../index.html" class="logo">
-        <p align="center" style="font-size:15px;"><b>Encoding Experiments</b></p>
-    </a>
-        <nav class="navbar navbar-static-top">
-          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
-          <section class="content-header">
-            <ol class="breadcrumb">
-              <li>
-                <a href="../index.html"><i class="fa fa-dashboard"></i>Encoding Experiments</a>
-              </li>
-              <li>
-                <a href="#">RZ-Unipolar</a>
-              </li>
-              <li class="active">Pre Test</li>
-            </ol>
-          </section>
-        </nav>
-      </header>
+            <a href="../index.html" class="logo">
+                <p align="center" style="font-size: 15px;"><b>Encoding Experiments</b></p>
+            </a>
+            <nav class="navbar navbar-static-top">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <ol class="breadcrumb" style="max-width: 400px; float: right; background: #3c8dbc;padding: 0;padding-top: 10px;padding-right: 10px;">
+                    <li class="breadcrumb-item active">
+                        Encoding Experiments
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Post Test</li>
+                  </ol>
+            </nav>
+        </header>
 
 
       <aside class="main-sidebar">
@@ -102,7 +97,7 @@
                     </a>
                 </li>
                 <li class="treeview" id="posttest">
-                    <a href=" posttest.html">
+                    <a href="posttest.html">
                         <i class=" fa fa-files-o">
                     </i>
                     <span>Post Test</span>
@@ -124,59 +119,81 @@
 
         <div class="content-wrapper">
           <section class="content">
-            <h3> Pre Test </h3>
+            <h3> Post Test </h3>
             <p style="font-size:130%; margin-top:2%">
 
               <div>
-                <p>Q1) Unipolar RZ is a type of ______  encoding</p>
+                <p>Q1) In uni-polar RZ encoding, symbol binary '1' is represented by</p>
                 <input type="radio" id="1" name="q1" value="1">
-                <label for="1">Line</label><br>
+                <label for="1">high voltage in first half of the bit and in the other half it returns to zero</label><br>
                 <input type="radio" id="2" name="q1" value="2">
-                <label for="2">Block</label><br>
+                <label for="2">high voltage for full duration</label><br>
                 <input type="radio" id="3" name="q1" value="3">
-                <label for="3">Scrambling</label><br>
-                <input type="radio" id="4" name="q1" value="4">
-                <label for="4">None of the above</label>
+                <label for="3">Pulse is transmitted for half the duration</label><br>
                 <details>
                   <summary>Show Answer</summary>
-                  <p>Line</p>
+                  <p>Both a) and c) are correct</p>
                 </details>
               </div>
-              <br/><br/>
+              <br/></br>
               <div>
                 <p>Q2) DC component is present in the encoded signal and there is loss of synchronization for long sequences of 0’s and 1’s in unipolar RZ</p>
+                <img src="images/1.png" style="max-width: 300px;">
+                <br/>
                 <input type="radio" id="2-1" name="q2" value="1">
-                <label for="2-1">True</label><br>
+                <label for="2-1">11101</label><br>
                 <input type="radio" id="2-2" name="q2" value="2">
-                <label for="2-2">False</label><br>
+                <label for="2-2">10101</label><br>
+                <input type="radio" id="2-3" name="q2" value="3">
+                <label for="2-3">11111</label><br>
+                <input type="radio" id="2-4" name="q2" value="4">
+                <label for="2-4">00110</label><br>
                 <details>
                   <summary>Show Answer</summary>
-                  <p>True</p>
+                  <p>10101</p>
                 </details>
               </div>
-              <br/><br/>
+              <br/></br>
               <div>
-                <p>Q3) NRZ-L is a type of _____ line encoding.</p>
+                <p>Q3) In which line encoding scheme high volt is assigned for logical 0 bit and low volt is assigned for logical 1.</p>
                 <input type="radio" id="1" name="q1" value="1">
-                <label for="1">Bipolar</label><br>
+                <label for="1">NRZ-I</label><br>
                 <input type="radio" id="2" name="q1" value="2">
-                <label for="2">Multitransition</label><br>
+                <label for="2">NRZ-L</label><br>
                 <input type="radio" id="3" name="q1" value="3">
-                <label for="3">Polar</label><br>
+                <label for="3">AMI</label><br>
                 <input type="radio" id="4" name="q1" value="4">
-                <label for="4">None of the above</label>
+                <label for="4">Mancheter</label><br>
                 <details>
                   <summary>Show Answer</summary>
-                  <p>Polar</p>
+                  <p>NRZ-L</p>
                 </details>
               </div>
               <br/></br>
               <div>
-                <p>Q4) NRZ codes are easy to engineer and it makes efficient use of bandwidth.</p>
+                <p>Q4) Which of the following is the correct input string for the following waveform (in NRZ-L). Assume low voltage at the beginning.</p>
+                <img src="images/2.png" style="max-width: 300px;">
+                <br/>
                 <input type="radio" id="2-1" name="q2" value="1">
-                <label for="2-1">True</label><br>
+                <label for="2-1">111010110</label><br>
                 <input type="radio" id="2-2" name="q2" value="2">
-                <label for="2-2">False</label><br>
+                <label for="2-2">101010001</label><br>
+                <input type="radio" id="2-3" name="q2" value="3">
+                <label for="2-3">111110011</label><br>
+                <input type="radio" id="2-4" name="q2" value="4">
+                <label for="2-4">101000110</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>101000110</p>
+                </details>
+              </div>
+              <br/></br>
+              <div>
+                <p>Q5) When there is long sequence of 0’s or 1’s, the receiving side will fail to regenerate the clock and synchronization between the transmitter and receiver clocks will fail.</p>
+                <input type="radio" id="1" name="q1" value="1">
+                <label for="1">True</label><br>
+                <input type="radio" id="2" name="q1" value="2">
+                <label for="2">False</label><br>
                 <details>
                   <summary>Show Answer</summary>
                   <p>True</p>
@@ -184,18 +201,54 @@
               </div>
               <br/></br>
               <div>
-                <p>Q5) In NRZ-I</BR>
-                    Statement 1: For each 1 in the bit sequence, the signal level is inverted.</br>
-                  Statement 2: A transition from one voltage level to the other represents a 1.
+                <p>Q6) Which of the following is the correct input string for the following waveform generated using NRZ-I. Assume low voltage at the beginning.</p>
+                <img src="images/3.png" style="max-width: 300px;">
+                <br/>
+                <input type="radio" id="2-1" name="q2" value="1">
+                <label for="2-1">11101</label><br>
+                <input type="radio" id="2-2" name="q2" value="2">
+                <label for="2-2">10101</label><br>
+                <input type="radio" id="2-3" name="q2" value="3">
+                <label for="2-3">11111</label><br>
+                <input type="radio" id="2-4" name="q2" value="4">
+                <label for="2-4">00110</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>10101</p>
+                </details>
+              </div>
+              <br/></br>
+              <div>
+                <p>Q7) Which of the following techniques is best at self-synchronization.</p>
+                <input type="radio" id="1" name="q1" value="1">
+                <label for="1">Manchester</label><br>
+                <input type="radio" id="2" name="q1" value="2">
+                <label for="2">NRZ-L</label><br>
+                <input type="radio" id="3" name="q1" value="3">
+                <label for="3">Unipolar RZ</label><br>
+                <input type="radio" id="4" name="q1" value="4">
+                <label for="4">All of the above</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>Manchester</p>
+                </details>
+              </div>
+              <br/></br>
+              <div>
+                <p>Q8) Statement 1: A binary 1 corresponds to a low-to-high transition.<br/>
+                  Statement 2: A binary 0 to a high-to-low transition in the middle.<br/>
+                  <br/><br/>
+                  Which of the above are true.
                   </p>
-                <input type="radio" id="1" name="q1" value="1">
-                <label for="1">Statement 1 is true and Statement 2 is false</label><br>
-                <input type="radio" id="2" name="q1" value="2">
-                <label for="2">Statement 1 is false and Statement 2 is true</label>  <br>
-                <input type="radio" id="3" name="q1" value="3">
-                <label for="3">Both are true</label><br>
-                <input type="radio" id="4" name="q1" value="4">
-                <label for="4">Both are false</label>
+                <br/>
+                <input type="radio" id="2-1" name="q2" value="1">
+                <label for="2-1">Statement 1 is true and Statement 2 is false</label><br>
+                <input type="radio" id="2-2" name="q2" value="2">
+                <label for="2-2">Statement 1 is false and Statement 2 is true</label><br>
+                <input type="radio" id="2-3" name="q2" value="3">
+                <label for="2-3">Both are true </label><br>
+                <input type="radio" id="2-4" name="q2" value="4">
+                <label for="2-4">Both are false</label><br>
                 <details>
                   <summary>Show Answer</summary>
                   <p>Both are true</p>
@@ -203,158 +256,117 @@
               </div>
               <br/></br>
               <div>
-                <p>Q6) Which of the following is not a Polar line encoding scheme?</p>
-                <input type="radio" id="2-1" name="q2" value="1">
-                <label for="2-1">NRZ-I</label><br>
-                <input type="radio" id="2-2" name="q2" value="2">
-                <label for="2-2">NRZ-L</label><br>
-                <input type="radio" id="2-3" name="q2" value="3">
-                <label for="2-3">AMI</label><br>
-                <input type="radio" id="2-4" name="q2" value="4">
-                <label for="2-4">All of the above</label>
-                <details>
-                  <summary>Show Answer</summary>
-                  <p>AMI</p>
-                </details>
-              </div>
-              <br/></br>
-              <div>
-                <p>Q7) Manchester encoding is a combination of which two line encoding schemes.</p>
+                <p>Q9) Which of the following characteristics are true for Differential manchester. <br>
+                  C1: Three levels. <br>
+                  C2: No DC component. <br>
+                  C3: Good synchronization. <br>
+                </p>
                 <input type="radio" id="1" name="q1" value="1">
-                <label for="1">NRZ-L and RZ</label><br>
+                <label for="1">C1 and C2</label><br>
                 <input type="radio" id="2" name="q1" value="2">
-                <label for="2">NRZ-I and RZ</label><br>
+                <label for="2">C2 and C3</label><br>
                 <input type="radio" id="3" name="q1" value="3">
-                <label for="3">NRZ-L and AMI</label><br>
+                <label for="3">C1 and C3</label><br>
                 <input type="radio" id="4" name="q1" value="4">
                 <label for="4">None of the above</label><br>
                 <details>
                   <summary>Show Answer</summary>
-                  <p>NRZ-L and RZ</p>
+                  <p>C2 and C3</p>
                 </details>
               </div>
               <br/></br>
               <div>
-                <p>Q8) How many levels does manchester line encoding involve?</p>
+                <p>Q10) Check if the given figure is correct Digital signal for given input data using Differential Manchester.
+                  <br>Assume low voltage at the beginning.
+                  <br>Input data: 101000110
+                  <br><img src="./images/4.png">
+                  </p>
                 <br/>
                 <input type="radio" id="2-1" name="q2" value="1">
-                <label for="2-1">Two levels with inversion in the middle of each bit </label><br>
+                <label for="2-1">Correct</label><br>
                 <input type="radio" id="2-2" name="q2" value="2">
-                <label for="2-2">Three levels with inversion in the middle of each bit </label><br>
-                <input type="radio" id="2-3" name="q2" value="3">
-                <label for="2-3">Two levels without inversion in the middle of each bit </label><br>
-                <input type="radio" id="2-4" name="q2" value="4">
-                <label for="2-4">Three levels without inversion in the middle of each bit </label><br>
+                <label for="2-2">Incorrect</label><br>
                 <details>
                   <summary>Show Answer</summary>
-                  <p>Two levels with inversion in the middle of each bit</p>
+                  <p>Correct</p>
                 </details>
               </div>
               <br/></br>
               <div>
-                <p>Q9) The polarities in NRZ format use.</p>
-                <input type="radio" id="1" name="q1" value="1">
-                <label for="1">Complete pulse duration</label><br>
-                <input type="radio" id="2" name="q1" value="2">
-                <label for="2">Half duration</label><br>
-                <input type="radio" id="3" name="q1" value="3">
-                <label for="3">Bothe positive as well as negative value</label><br>
-                <input type="radio" id="4" name="q1" value="4">
-                <label for="4">Each pulse is used for twice the duration</label><br>
-                <details>
-                  <summary>Show Answer</summary>
-                  <p>Complete pulse duration</p>
-                </details>
-              </div>
-              <br/></br>
-              <div>
-                <p>Q10) Which of the following combines the idea of RZ and NRZ-I?</p>
-                <br/>
-                <input type="radio" id="2-1" name="q2" value="1">
-                <label for="2-1">Differential manchester</label><br>
-                <input type="radio" id="2-2" name="q2" value="2">
-                <label for="2-2">Pseudoternary</label><br>
-                <input type="radio" id="2-3" name="q2" value="3">
-                <label for="2-3">AMI</label><br>
-                <input type="radio" id="2-4" name="q2" value="4">
-                <label for="2-4">None of these</label><br>
-                <details>
-                  <summary>Show Answer</summary>
-                  <p>Differential manchester</p>
-                </details>
-              </div>
-              <br/><br/>
-              <div>
-                <p>Q11) In which line encoding scheme 0 bit is represented by Zero level and binary 1 is represented by alternating positive and negative voltages.</p>
-                <input type="radio" id="1" name="q1" value="1">
-                <label for="1">NRZ-I</label><br>
-                <input type="radio" id="2" name="q1" value="2">
-                <label for="2">AMI</label><br>
-                <input type="radio" id="3" name="q1" value="3">
-                <label for="3">Pseudoternary</label><br>
-                <input type="radio" id="4" name="q1" value="4">
-                <label for="4">All of the above</label><br>
-                <details>
-                  <summary>Show Answer</summary>
-                  <p>AMI</p>
-                </details>
-              </div>
-              <br/></br>
-              <div>
-                <p>Q12) AMI is a __________ type of line encoding scheme.</p>
-                <br/>
-                <input type="radio" id="2-1" name="q2" value="1">
-                <label for="2-1">Polar</label><br>
-                <input type="radio" id="2-2" name="q2" value="2">
-                <label for="2-2">Uni-Polar</label><br>
-                <input type="radio" id="2-3" name="q2" value="3">
-                <label for="2-3">Bipolar</label><br>
-                <input type="radio" id="2-4" name="q2" value="4">
-                <label for="2-4">Multitransition</label><br>
-                <details>
-                  <summary>Show Answer</summary>
-                  <p>Bipolar</p>
-                </details>
-              </div>
-              <br/><br/>
-              <div>
-                <p>Q13)
-                  In Pseudoternary line encoding<br/>
-                  Statement 1:  0 bit is represented by Zero level <br/>
-                  Statement 2: Binary 1 is represented by alternating positive and negative voltages.<br/>
-                  Which of the above are true.<br/>
+                <p>Q11) Which of the following characteristics are true for Differential manchester<br>
+                  C1: Three levels <br>
+                  C2: DC component present<br>
+                  C3: Lesser bandwidth<br>
                   </p>
                 <input type="radio" id="1" name="q1" value="1">
-                <label for="1">Statement 1 is true and Statement 2 is false</label><br>
+                <label for="1">C1 and C2</label><br>
                 <input type="radio" id="2" name="q1" value="2">
-                <label for="2">Statement 1 is false and Statement 2 is true</label><br>
+                <label for="2">C2 and C3</label><br>
                 <input type="radio" id="3" name="q1" value="3">
-                <label for="3">Both are true</label><br>
+                <label for="3">C1 and C3</label><br>
                 <input type="radio" id="4" name="q1" value="4">
-                <label for="4">Both are false</label><br>
+                <label for="4">None of the above</label><br>
                 <details>
                   <summary>Show Answer</summary>
-                  <p>Both are false</p>
+                  <p>C1 and C3</p>
                 </details>
               </div>
               <br/></br>
               <div>
-                <p>Q14) The ________ represents the number of bits sent per second, whereas the ______ defines the number of signal elements per second in the signal.
+                <p>Q12) Which of the following is the correct input string for the following waveform generated using AMI. Assume the most recent preceding 1 bit has negative voltage.<br>
+                  <br/>
+                  <img src="images/5.png">
                 </p>
-                <br/>
                 <input type="radio" id="2-1" name="q2" value="1">
-                <label for="2-1">bit rate, baud rate </label><br>
+                <label for="2-1">10101010101</label><br>
                 <input type="radio" id="2-2" name="q2" value="2">
-                <label for="2-2">baud rate , bit rate</label><br>
+                <label for="2-2">11001110010</label><br>
                 <input type="radio" id="2-3" name="q2" value="3">
-                <label for="2-3">Both are same</label><br>
+                <label for="2-3">01001100011</label><br>
                 <input type="radio" id="2-4" name="q2" value="4">
                 <label for="2-4">None of the above</label><br>
                 <details>
                   <summary>Show Answer</summary>
-                  <p>bit rate, baud rate </p>
+                  <p>Both are true</p>
                 </details>
               </div>
+              <br/></br>
+              <div>
+                <p>Q13) Which of the following techniques have no DC component<br>
+                  </p>
+                <input type="radio" id="1" name="q1" value="1">
+                <label for="1">Polar NRZ-I</label><br>
+                <input type="radio" id="2" name="q1" value="2">
+                <label for="2">Pseudoternary</label><br>
+                <input type="radio" id="3" name="q1" value="3">
+                <label for="3">Manchester</label><br>
+                <input type="radio" id="4" name="q1" value="4">
+                <label for="4">Both b) and c)</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>Both b) and c)</p>
+                </details>
+              </div>
+              <br/></br>
+              <div>
+                <p>Q14) Which of the following is the correct input string for the following waveform generated using Pseudoternary. Assume the most recent preceding 1 bit has negative voltage.<br>
+                  <br/>
+                  <img src="images/6.png">
+                </p>
+                <input type="radio" id="2-1" name="q2" value="1">
+                <label for="2-1">10101010101</label><br>
+                <input type="radio" id="2-2" name="q2" value="2">
+                <label for="2-2">11001110010</label><br>
+                <input type="radio" id="2-3" name="q2" value="3">
+                <label for="2-3">01001100011</label><br>
+                <input type="radio" id="2-4" name="q2" value="4">
+                <label for="2-4">None of the above</label><br>
+                <details>
+                  <summary>Show Answer</summary>
+                  <p>None of the above</p>
+                </details>
+              </div>
+
             </p>
           </section>
         </div>

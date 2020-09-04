@@ -4,14 +4,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Virtual Labs</title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
-        <meta name="author" content="Anudit Nagar" />
+        <meta name="author" content="Anudit Nagar">
         <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
         <link rel="stylesheet" href="../../dist/css/AdminLTE.css" />
         <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css" />
         <script>
             window.onload = function () {
-                document.getElementById("aim").className = "active treeview";
+                document.getElementById("theory").className = "active treeview";
             };
         </script>
     </head>
@@ -55,6 +55,12 @@
                     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                         <span class="sr-only">Toggle navigation</span>
                     </a>
+                    <ol class="breadcrumb" style="max-width: 400px; float: right; background: #3c8dbc;padding: 0;padding-top: 10px;padding-right: 10px;">
+                        <li class="breadcrumb-item active">
+                            Encoding Experiments
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Theory</li>
+                      </ol>
                 </nav>
             </header>
 
@@ -103,18 +109,49 @@
             </aside>
 
             <div class="content-wrapper">
-                <section class="content">
-                    <h3>Aim</h3>
-                    <ol style="font-size: 130%; margin-top: 2%;">
-                        <li>To understand RZ-Unipolar Encoding Scheme.</li>
-                        <li>To understand NRZ-L Encoding Scheme.</li>
-                        <li>To understand NRZ-I Encoding Scheme.</li>
-                        <li>To understand Manchester Encoding Scheme.</li>
-                        <li>To understand Differential Manchester Encoding Scheme.</li>
-                        <li>To understand AMI Encoding Scheme.</li>
-                        <li>To understand Pseudoternary Encoding Scheme.</li>
-                    </ol>
-                </section>
+              <section class="content">
+                <h3>Theory</h3>
+                  <H4>
+                      Communication/transmission of data from sender to
+receiver takes place in a computer network. Analog/digital data traverses through communication media
+from source to destination in form of signals.<BR/>The transmitting signals may undergo attenuation and distortion as they
+travel over large distances.Therefore there is a need to match
+the properties of transmitted signal as per the communication media<BR/> for which digital data can be converted into
+digital signals.<BR/><BR/>
+                  Line encoding: The process of converting digital data into digital signals is referred as Line Encoding.<BR/>
+                  With the help of line encoding schemes, a sequence of bits are converted into digital signal(encoding) <BR/>which then get converted back into bits at the receiver end (decoding).
+                  </H4>
+                <ol style="font-size: 130%; margin-top: 2%;">
+                    <li>
+                      <b>RZ-Unipolar Encoding Scheme:</b>
+                      RZ uses three levels of amplitude i.e. positive, negative, zero. it returns to zero in the middle of each bit. 1 : positiveto-zero, 0 : negative-to-zero.
+                    </li>
+                    <li>
+                      <b>NRZ-L Encoding Scheme:</b>
+                      In NRZ-L type of encoding, high volt is assigned for logical 0 bit and low volt is assigned for logical 1. Level of voltage determines bit value.
+                    </li>
+                    <li>
+                      <b>NRZ-I Encoding Scheme:</b>
+                      For logical 1 the signal will be inverted, but when it encounters logical 0 then signal will not undergo any transition.
+                    </li>
+                    <li>
+                      <b>Manchester Encoding Scheme:</b>
+                      A logic 0 is indicated by a 0 to 1 transition at the centre of the bit and logic 1 by 1 to 0 transition.
+                    </li>
+                    <li>
+                      <b>Differential Manchester Encoding Scheme:</b>
+                      It combines the idea of RZ and NRZ-I.If the next bit is 0,transition will occur but if the next bit is 1 , no transition will occur.
+                    </li>
+                    <li>
+                      <b>AMI Encoding Scheme:</b>
+                      In Alternate Mark Inversion or AMI, 0 bit is represented by Zero level and binary 1 is represented by alternating positive and negative voltages.
+                    </li>
+                    <li>
+                      <b>Pseudoternary Encoding Scheme:</b>
+                      Pseudoternary is similar to AMI with slight difference that alternating positive and negative is used for binary 0 instead of binary 1.
+                    </li>
+                </ol>
+              </section>
             </div>
             <footer class="main-footer">
                 <h4 align="center">Lab contributed by Bennett University</h4>
