@@ -1,61 +1,63 @@
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Virtual Labs</title>
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
-        <meta name="author" content="Anudit Nagar">
-        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="../../dist/css/AdminLTE.css" />
-        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css" />
-        <style>
-            body {
-                font-family: Arial;
-            }
 
-            .tab {
-                overflow: hidden;
-                border: 1px solid #ccc;
-                background-color: #f1f1f1;
-            }
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Virtual Labs</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <meta name="author" content="Anudit Nagar">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css" />
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css" />
+    <style>
+        body {
+            font-family: Arial;
+        }
 
-            .tab button {
-                background-color: inherit;
-                float: left;
-                border: none;
-                outline: none;
-                cursor: pointer;
-                padding: 14px 16px;
-                transition: 0.3s;
-                font-size: 17px;
-            }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
 
-            .tab button:hover {
-                background-color: #ddd;
-            }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
 
-            .tab button.active {
-                background-color: #ccc;
-            }
+        .tab button:hover {
+            background-color: #ddd;
+        }
 
-            .tabcontent {
-                display: none;
-                padding: 6px 12px;
-                border: 1px solid #ccc;
-                border-top: none;
-            }
+        .tab button.active {
+            background-color: #ccc;
+        }
 
-            .topright {
-                float: right;
-                cursor: pointer;
-                font-size: 28px;
-            }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
 
-            .topright:hover {
-                color: red;
-            }
-            .view-button {
+        .topright {
+            float: right;
+            cursor: pointer;
+            font-size: 28px;
+        }
+
+        .topright:hover {
+            color: red;
+        }
+
+        .view-button {
             padding: 10px 15px;
             /* background-color: green; */
             /* color: white; */
@@ -64,121 +66,123 @@
 
         .view-button:hover {
             background-color: #77BB41;
-            color:white;
+            color: white;
         }
-        </style>
-    </head>
+    </style>
+</head>
 
-    <body>
-        
-        <div class="navbar" style="border-bottom-color: #ff6600;border-bottom-width: 10px;height: 100px;">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="http://iitb.ac.in">
-                        <span><img src="images/vlab.jpg" style="margin-top: -8px;height: 70px;" /></span>
-                    </a>
+<body>
+
+    <div class="navbar" style="border-bottom-color: #ff6600;border-bottom-width: 10px;height: 100px;">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://iitb.ac.in">
+                    <span><img src="images/vlab.jpg" style="margin-top: -8px;height: 70px;" /></span>
+                </a>
+            </div>
+            <div id="overlay" onclick="off()">
+                <div id="text">
+                    A logic 0 is indicated by a 0 to 1 transition at the centre of the bit and logic 1 by 1 to 0
+                    transition.
                 </div>
-                <div id="overlay" onclick="off()">
-                    <div id="text">
-                       A logic 0 is indicated by a 0 to 1 transition at the centre of the bit and logic 1 by 1 to 0 transition.
+            </div>
+            <p class="navbar-brand" style="position:absolute;right:0;color:#2C99CE">
+                Line Encoding Experiments
+            </p>
+
+        </div>
+    </div>
+
+    <div class="wrapper" style="background-color: #ffffff;">
+        <div>
+            <section class="content-header">
+                <div class="row" style=" text-align: center; ">
+                    <script>
+                        function on() {
+                            document.getElementById("overlay").style.display = "block";
+                        }
+
+                        function off() {
+                            document.getElementById("overlay").style.display = "none";
+                        }
+
+                        function switchExp() {
+                            let selInd = parseInt(document.querySelector('#exps').value);
+                            if (selInd == 0) {
+                                window.location = './simulation-rz-uni.html';
+                            }
+                            else if (selInd == 1) {
+                                window.location = './simulation-nrz-l.html';
+                            }
+                            else if (selInd == 2) {
+                                window.location = './simulation-nrz-i.html';
+                            }
+                            else if (selInd == 3) {
+                                window.location = './simulation-manchester.html';
+                            }
+                            else if (selInd == 4) {
+                                window.location = './simulation-differential-manchester.html';
+                            }
+                            else if (selInd == 5) {
+                                window.location = './simulation-ami.html';
+                            }
+                            else if (selInd == 6) {
+                                window.location = './simulation-pseudoternary.html';
+                            }
+                        }
+                    </script>
+
+                    <h5 style="cursor:pointer;text-align:right;color:#2C99CE" onclick="on()">
+                        <span class="view-button">View Instructions</span>
+                    </h5>
+
+                    <label for="exps">Choose an Experiment:</label>
+                    <select name="exps" id="exps">
+                        <option type="button" value="0">RZ Unipolar</option>
+                        <option type="button" value="1">NRZ-L</option>
+                        <option type="button" value="2">NRZ-I</option>
+                        <option type="button" value="3">Manchester</option>
+                        <option type="button" value="4">Differential Manchester</option>
+                        <option type="button" value="5">AMI</option>
+                        <option type="button" value="6">Pseudoternary</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" onclick="switchExp()">Submit</button>
+                </div>
+                <br /><br />
+                <h1 style="text-align:center;color:#2C99CE">
+                    Manchester - Simulation
+                </h1>
+            </section>
+            <section class="content">
+                <div class="row">
+                    <div class="input-field col col-xs-12 col-md-6 s5 text-center">
+                        <label for="data_bit">Enter Data Bit</label>
+                        <input id="data_bit" type="text" class="validate" value="10101" />
+                    </div>
+                    <div class="input-field col col-xs-12 col-md-6 s5 text-center">
+                        <label for="voltage">Enter Voltage</label>
+                        <input id="voltage" type="text" class="validate" value="1" />
                     </div>
                 </div>
-                <p class="navbar-brand" style="position:absolute;right:0;">
-                    Line Encoding Experiments
-                </p>
-
-            </div>
+                <div id="manchester"></div>
+            </section>
         </div>
 
-            <div class="wrapper" style="background-color: #ecf0f5;">
-                <div>
-                    <section class="content-header">
-                        <div class="row" style=" text-align: center; ">
-                            <script>
-                                function on() {
-                                  document.getElementById("overlay").style.display = "block";
-                                }
-
-                                function off() {
-                                  document.getElementById("overlay").style.display = "none";
-                                }
-
-                                function switchExp(){
-                                    let selInd = parseInt(document.querySelector('#exps').value);
-                                    if (selInd == 0){
-                                        window.location = './simulation-rz-uni.html';
-                                    }
-                                    else if (selInd == 1){
-                                        window.location = './simulation-nrz-l.html';
-                                    }
-                                    else if (selInd == 2){
-                                        window.location = './simulation-nrz-i.html';
-                                    }
-                                    else if (selInd == 3){
-                                        window.location = './simulation-manchester.html';
-                                    }
-                                    else if (selInd == 4){
-                                        window.location = './simulation-differential-manchester.html';
-                                    }
-                                    else if (selInd == 5){
-                                        window.location = './simulation-ami.html';
-                                    }
-                                    else if (selInd == 6){
-                                        window.location = './simulation-pseudoternary.html';
-                                    }
-                                }
-                              </script>
-
-                              <h5 style="cursor:pointer;text-align:right" onclick="on()">
-                                <span class="view-button">View Instructions</span>
-                              </h5>
-
-                              <label for="exps">Choose an Experiment:</label>
-                            <select name="exps" id="exps">
-                                <option type="button" value="0" >RZ Unipolar</option>
-                                <option type="button" value="1" >NRZ-L</option>
-                                <option type="button" value="2" >NRZ-I</option>
-                                <option type="button" value="3" >Manchester</option>
-                                <option type="button" value="4" >Differential Manchester</option>
-                                <option type="button" value="5" >AMI</option>
-                                <option type="button" value="6" >Pseudoternary</option>
-                            </select>
-                            <button type="button" class="btn btn-primary" onclick="switchExp()">Submit</button>
-                        </div>
-                        <br/><br/>
-                    <h1 style="text-align:center">
-                        Manchester - Simulation
-                    </h1>
-                </section>
-                <section class="content">
-                    <div class="row">
-                        <div class="input-field col col-xs-12 col-md-6 s5 text-center">
-                            <label for="data_bit">Enter Data Bit</label>
-                            <input id="data_bit" type="text" class="validate" value="10101" />
-                        </div>
-                        <div class="input-field col col-xs-12 col-md-6 s5 text-center">
-                            <label for="voltage">Enter Voltage</label>
-                            <input id="voltage" type="text" class="validate" value="1" />
-                        </div>
-                    </div>
-                    <div id="manchester"></div>
-                </section>
-            </div>
-
+    </div>
+    <div style="position:absolute;left:0;right:0;">
+        <div style=" bottom: 0; position: fixed; width: 100%; ">
+            <h4 style="text-align:center;padding:20px;background-color: black;color:blanchedalmond">© copyrights Virtual
+                Labs IIT Roorkee</h4>
         </div>
-        <div style="position:absolute;left:0;right:0;">
-            <div style=" bottom: 0; position: fixed; width: 100%; ">
-                <h4 style="text-align:center;padding:20px;background-color: black;color:blanchedalmond">© copyrights Virtual
-                    Labs IIT Roorkee</h4>
-            </div>
-        </div>
-    </body>
-    <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <script src="../../bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <script src="../../plugins/fastclick/fastclick.js"></script>
-    <script src="../../dist/js/app.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script type="text/javascript" src="./manchester/index.js"></script>
+    </div>
+</body>
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<script src="../../dist/js/app.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="./manchester/index.js"></script>
+
 </html>
