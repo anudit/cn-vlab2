@@ -137,8 +137,8 @@ function plot(){
 				font: {size: 16},
 				yref: 'paper'
 			},
-			plot_bgcolor:'#ecf0f5',
-			paper_bgcolor:"#ecf0f5",
+			plot_bgcolor:'#fff',
+			paper_bgcolor:"#fff",
 			};
 			//calling plotly to plot the graph
 			Plotly.newPlot('nrz_i', data, layout,{responsive: true});

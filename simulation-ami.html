@@ -66,7 +66,7 @@
             background-color: #77BB41;
             color:white;
         }
-        .link { color: #ffffff; 
+        .link { color: #ffffff;
         }
         </style>
     </head>
@@ -135,7 +135,7 @@
                           </h5>
 
                           <label for="exps">Choose an Experiment:</label>
-                        <select name="exps" id="exps">
+                        <select name="exps" id="exps" onchange="switchExp()">
                             <option type="button" value="0" >RZ Unipolar</option>
                             <option type="button" value="1" >NRZ-L</option>
                             <option type="button" value="2" >NRZ-I</option>
@@ -144,7 +144,6 @@
                             <option type="button" value="5" >AMI</option>
                             <option type="button" value="6" >Pseudoternary</option>
                         </select>
-                        <button type="button" class="btn btn-primary" onclick="switchExp()">Submit</button>
                     </div>
                     <br/><br/>
                     <h1 style="text-align:center;color:#2C99CE">
