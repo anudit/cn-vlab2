@@ -79,16 +79,18 @@
                     </a>
                 </div>
                 <div id="overlay" onclick="off()">
-                    <div id="text"><H3>
-                        The following instructions are for NRZ-L Encoding-</br>
+                <div class="close-btn">X</div>
+                <div id="text"><H3>
+                    The following instructions are for RZ-Unipolar Encoding-</br>
                     1) Enter the data bits you wish to encode.</br>
                     2) Set the voltage of Data signals.</br>
                     3) Your Output digital signal will be plotted live for you.</br></br>
 
                     Rules for the encoding:</br>
-                      In NRZ-L type of encoding, high volt is assigned for logical 0 bit and low volt is assigned for logical 1. Level of voltage determines bit value.</H3>
-                    </div>
+                    RZ uses three levels of amplitude i.e. positive, negative, zero. it returns to zero in the middle of
+                    each bit. 1 : positiveto-zero, 0 : negative-to-zero.</H3>
                 </div>
+            </div>
                 <p class="navbar-brand" style="position:absolute;right:0;color:#2C99CE">
                     <span class="view-button" onclick="window.location='./index.html'">Line Encoding Experiments</span>
                 </p>

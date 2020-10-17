@@ -4951,3 +4951,10 @@ table.text-center th {
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 }
+
+.close-btn {
+  color: #fff;
+  font-size: x-large;
+  float: right;
+  padding: 20px;
+}
